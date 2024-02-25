@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn3
 
+
 #Se crean los sets(conjuntos) para realizar las operaciones
 a = {1, 2, 3, 4, 5}
 b = {3, 5, 6, 8, 9}
@@ -77,3 +78,22 @@ def definirSubConjunto(a, b):
             return f
     f = True
     return f
+#Definimos si a es subconjunto de b
+if definirSubConjunto(a, b) is False:
+    print("No es subconjunto")
+else:
+    print("Si es subconjunto")
+
+#Metodo para determinar si es un Disjunto
+def definirDisjunto(a, b):
+    for i in a:
+        if i in b:
+            return True
+    return False
+#Definimos si a es disjunto de b
+if definirDisjunto(a, b) is False:
+    print("Si es disjunto")
+else:
+    print("No es disjunto")
+
+ventana_principal.mainloop()
